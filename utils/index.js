@@ -1,4 +1,4 @@
-const DEFAULT_STRAPI_URL = 'http://localhost:5000';
+const DEFAULT_STRAPI_URL = 'http://localhost:5500';
 
 // Get the url of the Strapi API based om the env variable or the default local one.
 export function getStrapiURL(path = "") {
