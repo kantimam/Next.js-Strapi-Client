@@ -1,19 +1,7 @@
-import { getStrapiMedia } from "../../utils";
+import { StrapiMediaData, StrapiMediaList } from "../../types/strapiContent";
+import { getStrapiMedia } from "../../utils/strapiApi";
 
-interface IMediaItem {
-  id: number;
-  attributes: {
-    formats: {
-      thumbnail: {
-        url: string;
-        width: number;
-        height: number;
-      };
-    };
-  };
-}
-
-const GalleryItem = (mediaItem: IMediaItem) => {
+const GalleryItem = (mediaItem: StrapiMediaData) => {
   const mediaItemPreview = mediaItem?.attributes?.formats?.thumbnail;
 
   if (mediaItemPreview) {
@@ -35,9 +23,7 @@ const GalleryItem = (mediaItem: IMediaItem) => {
 };
 
 interface IProps {
-  Media: {
-    data: IMediaItem[];
-  };
+  Media: StrapiMediaList;
 }
 
 const Gallery = ({ Media }: IProps) => {

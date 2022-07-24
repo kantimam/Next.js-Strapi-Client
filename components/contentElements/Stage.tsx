@@ -1,4 +1,4 @@
-import { getImageAttributes, getStrapiMedia } from "../../utils";
+import { getImageAttributes, getStrapiMedia } from "../../utils/strapiApi";
 
 type Props = {
   image: any;

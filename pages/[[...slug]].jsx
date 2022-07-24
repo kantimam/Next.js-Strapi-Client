@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import { getDataDependencies } from "./services/api";
-import { getStrapiURL, findPageBySlug, getPages } from "../utils";
+import { getStrapiURL, findPageBySlug, getPages } from "../utils/strapiApi";
 import ContentElementManager from "../components/ContentElementsManager";
 import MainLayout from "../components/layouts/MainLayout";
 

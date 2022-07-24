@@ -1,7 +1,7 @@
 import FormattedText from './contentElements/FormattedText';
 import Gallery from './contentElements/Gallery';
-import ImageTransition from './contentElements/ImageTransition';
 import Stage from './contentElements/Stage';
+import StrapiImageTransition from './contentElements/StrapiImageTransition';
 import TextWithMedia from './contentElements/TextWithMedia';
 import Video from './contentElements/Video';
 
@@ -13,7 +13,7 @@ const knownContentElements = {
   'content-elements.textWithMedia': TextWithMedia,
   'content-elements.video': Video,
   'content-elements.gallery': Gallery,
-  'content-elements.imageTransition': ImageTransition
+  'content-elements.image-transition': StrapiImageTransition
 }
 
 
