@@ -20,8 +20,13 @@ const ImageTransition = ({
         containerRef.current as HTMLDivElement,
         startImageSrc,
         endImageSrc,
-        displacementImageSrc
+        displacementImageSrc,
+        { duration: 1200, resizeContainer: true }
       );
+      containerRef.current?.addEventListener("click", () => {
+        const tr = transition as Transition;
+        tr.transitionFinished ? tr.reverse() : tr.start();
+      });
     }
 
     return () => {
@@ -30,8 +35,8 @@ const ImageTransition = ({
   }, [startImageSrc, endImageSrc, displacementImageSrc]);
 
   return (
-    <section className="py-4 mx-auto container bg-gray-300">
-      <div ref={containerRef}>ImageTransition</div>
+    <section className="py-8 mx-auto container max-w-2xl">
+      <div className="rounded-lg overflow-hidden" ref={containerRef}></div>
     </section>
   );
 };
